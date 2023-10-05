@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Checkbox } from "antd";
 import Typo from "../components/Typography";
 import { StarFilled, StarOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 export default function Card({
   title,
@@ -14,12 +15,14 @@ export default function Card({
     <Container>
       <Contents>
         <Checkbox />
-        <TodoContainer>
-          <Typo size={16} bold>
-            {title}
-          </Typo>
-          <Typo size={12}>{contents}</Typo>
-        </TodoContainer>
+        <Link href="/1">
+          <TodoContainer>
+            <Typo size={16} bold>
+              {title}
+            </Typo>
+            <Typo size={12}>{contents}</Typo>
+          </TodoContainer>
+        </Link>
       </Contents>
       <Important>
         <StarBox>
@@ -47,6 +50,7 @@ const TodoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 400px;
 `;
 
 const Important = styled.div`

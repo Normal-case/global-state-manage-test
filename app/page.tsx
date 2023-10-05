@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 import Submit from "@/components/Button";
 import Card from "@/components/Card";
 import Popup from "@/components/Popup";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,9 +13,7 @@ export default function Home() {
       <Submit>Submit</Submit>
 
       {/* todo: 해야할 일이 추가되면 새로운 카드를 만듦 */}
-      <Link href={`/${1}`}>
-        <Card title={"오늘 해야할일"} contents={"컨텐츠 쓰는 곳"} />
-      </Link>
+      <Card title={"오늘 해야할일"} contents={"컨텐츠 쓰는 곳"} />
 
       <Popup />
     </Container>
